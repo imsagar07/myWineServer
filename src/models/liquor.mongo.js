@@ -14,7 +14,7 @@ const liquorSchema = new mongoose.Schema({
         required: true,
     },
     img: { 
-        type: string, 
+        type: String, 
         contentType: String 
      },
     liquorType: [
