@@ -5,6 +5,7 @@ const fs = require("fs");
 
 async function signUp(req, res) { 
     try {
+        res.setHeader("Access-Control-Allow-Origin", "*");
         const { username, email, password } = req.body;
         const isUserExist = await usersData.findOne({ email: email });
         if (isUserExist) {
