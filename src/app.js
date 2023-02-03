@@ -7,7 +7,8 @@ const api = require('./routes/api');
 const app = express();
 
 app.use(cors({
-  origin: ['https://mynewwineserver.onrender.com','http://localhost:8100'],  
+  // origin: ['https://mynewwineserver.onrender.com','http://localhost:8100'],  
+  origin:"*"
 }));
 app.use(morgan('combined'));
 
