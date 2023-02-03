@@ -7,9 +7,10 @@ async function saveLiquorData(req, res) {
         const liquorData = new liquorDatas({
             "brandType": req.body.brandType,
             "liquorname": req.body.liquorname,
-            "price": req.body.price,
             "description": req.body.description,
             "liquorType": req.body.liquorType,
+            "img": req.body.img,
+            "brandId": req.body._id
             // 'img': fs.readFileSync(liquor.image),
             // 'contentType': 'image/png'
         });

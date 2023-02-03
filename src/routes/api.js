@@ -11,6 +11,8 @@ const getLiquor = require('./getLiquor/getliquor.router');
 
 const savAddressData = require('./addAddress/addAddress.router');
 const getAddress = require('./addAddress/addAddress.router');
+
+const saveLiquorData = require('./addLiquor/addLiquor.router');
 const api = express.Router();
 
 //user signin and signup
@@ -25,6 +27,9 @@ api.use('/getliquor', getLiquor);
 api.use('/getLiqourTypes', getLiquor);
 api.use('/getliquor/saveBrands', getLiquor);
 // api.use('/launches', launchesRouter);
+
+//add liquor
+api.use('/saveLiquor',saveLiquorData)
 
 
 

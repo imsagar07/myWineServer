@@ -13,10 +13,14 @@ const liquorSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    img: { 
-        type: String, 
-        contentType: String 
-     },
+    img: {
+        type: String,
+        required: true,
+    },
+    brandId: {
+        type: String,
+        required: true,
+    },
     liquorType: [
         {
             value: {
