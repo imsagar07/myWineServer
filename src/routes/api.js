@@ -29,7 +29,7 @@ api.use('/getliquor/saveBrands', getLiquor);
 // api.use('/launches', launchesRouter);
 
 //add liquor
-api.use('/saveLiquor',saveLiquorData)
+api.use('/saveLiquor',saveLiquorData) 
 
 
 

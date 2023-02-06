@@ -7,6 +7,6 @@ const {
 
 const addLiquorRoute = express.Router();
 
-addLiquorRoute.get('/saveLiquor', auth,  addLiquorData);
+addLiquorRoute.post('/', auth,  addLiquorData);
 
 module.exports = addLiquorRoute;

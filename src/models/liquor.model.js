@@ -1,6 +1,7 @@
 const liquorDatas = require('./liquor.mongo');
 const {liquorBrands, liquorType} = require('./liquorBrand.mongo');
 
+
 var fs = require('fs');
 async function saveLiquorData(req, res) {
     try {
@@ -10,9 +11,7 @@ async function saveLiquorData(req, res) {
             "description": req.body.description,
             "liquorType": req.body.liquorType,
             "img": req.body.img,
-            "brandId": req.body._id
-            // 'img': fs.readFileSync(liquor.image),
-            // 'contentType': 'image/png'
+            "brandId": req.body.brandId
         });
         await liquorData.save();
         res.status(200).json({ message: 'Save Suceessfully', status:200 });
