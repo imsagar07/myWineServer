@@ -44,12 +44,17 @@ async function getLiquor() {
     return await liquorBrands.find({});
 }
 
-async function getLiquorByid(req) {
+async function getLiquorByid(req,res) {
     try {
-      return await liquorDatas.findById(req).exec();
+      let liquorD = await liquorDatas.find({ brandId: req.body.id}).exec();
+      if(liquorD.length){
+        res.status(200).json({ liquor: liquorD, status:200 });
+      }
+      else{
+        res.status(400).json({ message: 'No record found', status:400 });
+      }
     } catch (err) {
-        console.log(err)
-        return err;
+        res.status(500).json({ message: err, status:500 });
     }
 }
 

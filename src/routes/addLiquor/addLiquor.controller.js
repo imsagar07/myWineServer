@@ -1,10 +1,15 @@
-const { saveLiquorData } = require('../../models/liquor.model');
+const { saveLiquorData,getLiquorByid } = require('../../models/liquor.model');
 
 async function addLiquorData(req, res) {
-  // return res.status(200).json(await saveLiquorData(req));
   return await saveLiquorData(req, res);
+}
+
+
+async function getLiquorByidData(req, res) {
+  return await getLiquorByid(req, res);
 }
 
 module.exports = {
   addLiquorData,
+  getLiquorByidData
 };
