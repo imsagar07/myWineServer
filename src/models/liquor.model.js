@@ -51,7 +51,7 @@ async function getLiquorByid(req,res) {
         res.status(200).json({ liquor: liquorD, status:200 });
       }
       else{
-        res.status(400).json({ message: 'No record found', status:400 });
+        res.status(200).json({ message: 'No record found', status:400 });
       }
     } catch (err) {
         res.status(500).json({ message: err, status:500 });
