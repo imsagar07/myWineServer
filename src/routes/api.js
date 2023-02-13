@@ -31,6 +31,7 @@ api.use('/getliquor/saveBrands', getLiquor);
 //add liquor
 api.use('/saveLiquor',liquorRoute) 
 api.use('/getLiquorByidData',liquorRoute) 
+api.use('/saveLiquorBrandData',liquorRoute) 
 
 
 
