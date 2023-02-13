@@ -31,7 +31,6 @@ async function saveLiquorBrand(req, res){
         res.status(200).json({ message: 'Save Suceessfully', status:200 });
     }
     catch(err){
-        console.error(`Could not save liquor brand data ${err}`);
         res.status(400).json({ message: err, status:400 });
     }
 }
